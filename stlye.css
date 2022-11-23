@@ -1,0 +1,246 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.8fr;
+    grid-template-rows: 0.6fr 1fr 2.3fr 0.7fr;
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto;
+   grid-template-areas: 
+   'header header header'
+    'aside footer summary'
+    'main footer summary '
+    'main area summary';
+    grid-gap: 0.3rem;
+}
+
+
+header{
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    grid-area: header;
+    
+}
+ 
+.post{
+   height: 500px;
+   width: 400px;
+    padding: 20px;
+    align-self: center;
+}
+
+aside{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    background-color: white;
+    height: 40vh;
+    grid-area: aside;
+}
+footer{
+     background-color: white;
+     height: 100%;
+     grid-area: footer;
+}
+area{
+    background-color: white;
+    grid-area: area;
+    height: 40vh;
+}
+summary{
+    background-color: white;
+    grid-area: summary;
+    height:100%;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 15px;
+   
+}
+
+h3{font-weight: lighter;
+font-size: 15px;
+
+}
+
+h4{font-weight: lighter;
+    font-size: 15px;
+    float: right;
+    
+    }
+.post-input-container{
+
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.post-input-container textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    resize: none;
+}
+.mypic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+    background-repeat: no-repeat;
+    float: left;
+
+
+
+}
+main{
+    background-color:white;
+    height: 100vw;
+    grid-area: main;
+}
+/* .photo{
+    height: 10px;
+    width: 20px;
+} */
+button{
+    background-color: darkblue;
+    color: white;
+}
+ 
+h1{
+    font-size: 20px;
+    font-weight: lighter ;
+}
+
+body{
+    background-color: gainsboro;
+    height: 100vh;  
+   
+}
+.hero{
+    width: 100%;
+    min-height: 10vh;
+    background: darkblue;
+    color: white;
+}
+nav{
+    background-color: darkblue;
+    width: 100%;
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+}
+.logo{
+    color: rgb(49, 196, 9);
+    font-weight: bold;
+    font-size: 30px;
+}
+.user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 30px;
+    background-repeat: no-repeat;
+
+} 
+
+nav ul {
+    width: 100%;
+    text-align: right;
+}
+
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: right;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  .logo a:hover, .dropdown:hover .dropbtn {
+    background-color:green;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:darkblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: green;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+  /* @media screen and (max-width:768px) {
+   .nav-list{
+      display: none;    
+   } */
+  
+  @media screen and (max-width:870px) {
+    .nav-list{
+       display: none;    
+    }
+   }
+
+   @media screen and (max-width:870px) {
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows:  0.6fr 1fr 2.3fr 0.7fr;
+        grid-template-areas: 
+        "header"
+        "aside"
+        "main"
+        "footer"
+        "summary"
+
+        ;
+    }  
+    }
+   
